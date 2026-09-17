@@ -14,6 +14,10 @@ func suma(a, b int) int {
 	return a + b
 }
 
+func sumaresta(c, d int) (int, int) {
+	return c + d, c - d
+}
+
 func main() {
 
 	var usr string
@@ -25,5 +29,12 @@ func main() {
 	var a, b int
 	fmt.Println("Ingresa dos valores: ")
 	fmt.Scan(&a, &b)
+	// Solo para un retorno
 	fmt.Println("El resultado es: ", suma(a, b))
+	var c, d int
+	fmt.Println("Ingresa dos valores: ")
+	fmt.Scan(&c, &d)
+
+	w, z := sumaresta(c, d)
+	fmt.Println("El resultado de la suma es: ", w, "y de la resta es: ", z)
 }
