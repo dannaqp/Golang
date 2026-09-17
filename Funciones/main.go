@@ -15,7 +15,10 @@ func suma(a, b int) int {
 }
 
 func sumaresta(c, d int) (int, int) {
-	return c + d, c - d
+	if c > d {
+		return c + d, c - d
+	}
+	return c + d, 0
 }
 
 func main() {
