@@ -15,7 +15,7 @@ func main() {
 		fmt.Scan(&op)
 		switch {
 		case op == 0:
-			fmt.Println("Saliendo del programa...")
+			fmt.Println("Salió del menú")
 			foriu = false
 		case op == 1:
 			var est int
@@ -42,18 +42,18 @@ func main() {
 			var nro int
 			fmt.Println("Escriba el número para la suma: ")
 			fmt.Scan(&nro)
-			fmt.Println("La suma total desde 1 a ", nro, "es", sumanro(nro))
+			fmt.Println("La suma total desde 1 a", nro, "es", sumanro(nro))
 
 		case op == 3:
-			var cel int
-			fmt.Println("Ingrese la temperatura en Celsius: ")
+			var cel float64
+			fmt.Println("Ingrese la temperatura en Celsius que desea convertir a Fahrenheit : ")
 			fmt.Scan(&cel)
-			//celafah(cel)
+			fmt.Println("La temperatura en Fahrenheit es: ", celafah(cel))
 		case op == 4:
-			var fah int
-			fmt.Println("Ingrese la temperatura en Fahrenheit: ")
+			var fah float64
+			fmt.Println("Ingrese la temperatura en Fahrenheit que desea convertir a Celsius: ")
 			fmt.Scan(&fah)
-			//fahacel(fah)
+			fmt.Println("La temperatura en Celsius es: ", fahacel(fah))
 		}
 	}
 
@@ -63,7 +63,7 @@ func notas(est int) float64 {
 	var nota float64
 	var sum float64
 	for i := 0; i < est; i++ {
-		fmt.Println("Ingrese la nota (0-100) del estudiante nro: ", (i + 1))
+		fmt.Println("Ingrese la nota (0-100) del estudiante nro ", (i + 1), ":")
 		fmt.Scan(&nota)
 		if nota < 0 || nota > 100 {
 			fmt.Println("La nota ingresada debe ser entre 0 y 100, por favor ingrese la nota nuevamente.")
@@ -90,11 +90,10 @@ func sumanro(nro int) int {
 
 }
 
-/*
-func celafah(cel float64) {
-
+func celafah(cel float64) float64 {
+	return (cel * 9.0 / 5.0) + 32.0
 }
-func fahacel(fah float64) {
 
+func fahacel(fah float64) float64 {
+	return (fah - 32.0) * 5.0 / 9.0
 }
-*/
