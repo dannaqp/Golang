@@ -1,7 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 	"taller2/contador"
 	"taller2/conversor"
 )
@@ -50,14 +52,17 @@ func main() {
 		case op == 2:
 			fmt.Println("Contador de Vocales")
 			var or string
+			sc := bufio.NewScanner(os.Stdin)
 			fmt.Println("Ingrese la frase de la cual desea contar las vocales: ")
-			fmt.Scan(&or)
+			sc.Scan()
+			or = sc.Text()
 			fmt.Println("El total de veces que aparece cada vocal es: ")
 			fmt.Println("Vocal a: ", contador.A(or))
 			fmt.Println("Vocal e: ", contador.E(or))
 			fmt.Println("Vocal i: ", contador.I(or))
 			fmt.Println("Vocal o: ", contador.O(or))
 			fmt.Println("Vocal u: ", contador.U(or))
+			foriu = false
 		}
 	}
 }
