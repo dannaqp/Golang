@@ -1,11 +1,10 @@
 package contador
 
 func A(or string) int {
-	let := 'a'
 	cont := 0
 
 	for _, char := range or {
-		if char == let {
+		if char == 'a' || char == 'A' {
 			cont++
 		}
 	}
@@ -13,11 +12,10 @@ func A(or string) int {
 }
 
 func E(or string) int {
-	let := 'e'
 	cont := 0
 
 	for _, char := range or {
-		if char == let {
+		if char == 'e' || char == 'E' {
 			cont++
 		}
 	}
@@ -25,11 +23,10 @@ func E(or string) int {
 }
 
 func I(or string) int {
-	let := 'i'
 	cont := 0
 
 	for _, char := range or {
-		if char == let {
+		if char == 'i' || char == 'I' {
 			cont++
 		}
 	}
@@ -37,11 +34,10 @@ func I(or string) int {
 }
 
 func O(or string) int {
-	let := 'o'
 	cont := 0
 
 	for _, char := range or {
-		if char == let {
+		if char == 'o' || char == 'O' {
 			cont++
 		}
 	}
@@ -49,11 +45,10 @@ func O(or string) int {
 }
 
 func U(or string) int {
-	let := 'u'
 	cont := 0
 
 	for _, char := range or {
-		if char == let {
+		if char == 'u' || char == 'U' {
 			cont++
 		}
 	}
