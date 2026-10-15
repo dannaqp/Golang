@@ -16,7 +16,7 @@ Este repositorio contiene los talleres, tareas y evaluaciones desarrollados en G
 
 ## Actividades
 
-La siguiente tabla detalla la organización de los directorios, las fechas de asignación o entrega y la descripción de cada tarea para facilitar el proceso de revisión y calificación:
+La siguiente tabla detalla la organización de los directorios, las fechas de entrega y la descripción de cada tarea:
 
 | Detalle | Directorio | Fecha |
 | :--- | :---: | ---: |
