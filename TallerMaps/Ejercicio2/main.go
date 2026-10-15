@@ -31,7 +31,7 @@ func main() {
 			var pro int
 			fmt.Println("Selecciona el producto del cual quieres ver el detalle: ", "\n1.", p1.Nombre, "\n2.", p2.Nombre, "\n3.", p3.Nombre, "\n4.", p4.Nombre)
 			fmt.Println("Escribe una opción: ")
-			fmt.Scan(&pro)
+			fmt.Scanln(&pro)
 			switch {
 			case pro == 1:
 				fmt.Println("Detalle del producto nro", pro)
@@ -51,7 +51,7 @@ func main() {
 			var pro int
 			fmt.Println("Selecciona el producto del cual quieres ver el valor total: ", "\n1.", p1.Nombre, "\n2.", p2.Nombre, "\n3.", p3.Nombre, "\n4.", p4.Nombre)
 			fmt.Println("Escribe una opción: ")
-			fmt.Scan(&pro)
+			fmt.Scanln(&pro)
 			switch {
 			case pro == 1:
 				fmt.Printf("\nEl valor total del producto %s es de $ %.2f", p1.Nombre, Total(p1))
@@ -67,7 +67,7 @@ func main() {
 			var pro int
 			fmt.Println("Selecciona el producto del cual quieres conocer el stock: ", "\n1.", p1.Nombre, "\n2.", p2.Nombre, "\n3.", p3.Nombre, "\n4.", p4.Nombre)
 			fmt.Println("Escribe una opción: ")
-			fmt.Scan(&pro)
+			fmt.Scanln(&pro)
 			switch {
 			case pro == 1:
 				estado := Stock(p1)
