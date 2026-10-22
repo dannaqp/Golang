@@ -31,6 +31,10 @@ func main() {
 	} else {
 		fmt.Println("El producto", product2.Nombre, "Ya no tiene stock")
 	}
+
+	product3 := NewProduct("mouse", 12.91, 0)
+	fmt.Println(product3)
+	fmt.Println("El nuevo stock del producto", product3, "es: ", product3.AsignarStock(18))
 }
 
 func calculartotal(p Producto) float64 {
@@ -45,4 +49,15 @@ func (p *Producto) Vender(cantidad int64) bool {
 		p.stock -= cantidad
 		return true
 	}
+}
+
+func NewProduct(nombre string, precio float64, stock int64) Producto {
+	return Producto{Nombre: nombre, Precio: precio, stock: 0}
+}
+
+func (p *Producto) AsignarStock(newstock int64) int64 {
+	if newstock > 0 {
+		p.stock += newstock
+	}
+	return p.stock
 }
