@@ -1,8 +1,10 @@
 package main
 
 import (
+	"bufio"
 	"errors"
 	"fmt"
+	"os"
 	"time"
 )
 
@@ -178,6 +180,8 @@ func (s *Syrup) DisplayDetailsS() {
 }
 
 func main() {
+
+	sc := bufio.NewScanner(os.Stdin)
 	fmt.Println("Sistema de Gestión de Inventario de Medicamentos")
 
 	date1 := time.Date(2023, 1, 15, 0, 0, 0, 0, time.UTC)
@@ -214,9 +218,11 @@ func main() {
 			var vidaUtil int
 
 			fmt.Print("Ingrese el nombre: ")
-			fmt.Scan(&nombre)
+			sc.Scan()
+			nombre = sc.Text()
 			fmt.Print("Ingrese el fabricante: ")
-			fmt.Scan(&fabricante)
+			sc.Scan()
+			fabricante = sc.Text()
 			fmt.Print("Ingrese la vida util en meses: ")
 			fmt.Scan(&vidaUtil)
 
@@ -247,7 +253,8 @@ func main() {
 				fmt.Print("Ingrese el volumen del Jarabe en ml: ")
 				fmt.Scan(&volumen)
 				fmt.Print("Ingrese el sabor del Jarabe: ")
-				fmt.Scan(&sabor)
+				sc.Scan()
+				sabor = sc.Text()
 
 				nuevoSyrup, err := NewSyrup(nombre, fabricante, date1, vidaUtil, volumen, sabor)
 				if err == nil {
