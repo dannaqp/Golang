@@ -26,3 +26,4 @@ La siguiente tabla detalla la organización de los directorios, las fechas de en
 | Taller Arrays, Slice y Maps | [Ejercicio 1](AnalisisNotas) , [Ejercicio 2](Maps) | 08/10/2026 |
 | Taller Maps - Intro Struct | [Taller Maps - Intro Struct](TallerMaps) | 15/10/2026 |
 | Taller Struct y Constructores | [Taller Struct y Constructores](TallerStructs) | 27/10/2026 |
+| Evaluación Formativa P2 | [Evaluación Formativa P2](EvalFor2) | 05/11/2026 |
